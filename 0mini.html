@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>미니 예제</h1>
+    <script>
+        var osj = {
+            " 화면 설계 및 구현" : "생활코딩",
+            " 데이터베이스": "오라클 RDBMS"
+        }
+        osj["화면 설계 프로젝트"] = "개인프로젝트";
+        // document.write("화면 설계 프로젝트 : " + osj["화면 설계 프로젝트"] + "<br>");
+        osj["데이터 베이스 프로젝트"] = "개인프로젝트";
+        // document.write("데이터 베이스 프로젝트 : " + osj["데이터 베이스 프로젝트"] + "<br>");
+    </script>
+    <h2>반복 출력</h2>
+<script>
+         for(var key in osj) {
+	        document.write(key + ":"+osj[key]+'<br>');
+         }
+</script>
+    <h2>함수 만들고 호출</h2>
+    <script>
+        osj.teach = function(){
+            for(var key in this){
+                if('teach'){
+                    document.write(key+':'+osj[key]+'<br>');
+                
+                }
+            }
+        }
+        osj.teach();
+    </script>
+
+
+    
+    
+</body>
+</html>
